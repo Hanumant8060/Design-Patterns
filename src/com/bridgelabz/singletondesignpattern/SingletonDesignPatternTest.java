@@ -22,6 +22,17 @@ public class SingletonDesignPatternTest {
 		BillPughSingleton billp1 = BillPughSingleton.getInstance();
 		System.out.println(billp.hashCode());
 		System.out.println(billp1.hashCode());
+		// Serialization Singleton
+		System.out.println("Serialization ");
+		SerializedSingleton instanceOne = SerializedSingleton.getInstance();
+		SerializedSingleton instanceTwo = SerializedSingleton.getInstance();
+		System.out.println(instanceOne.hashCode());
+		System.out.println(instanceTwo.hashCode());
+		// EnumSingleton
+		EnumSingleTon single = EnumSingleTon.Instance;
+		System.out.println(single.getValue());
+		single.setValue(2);
+		System.out.println(single.getValue());
 	}
 
 }
