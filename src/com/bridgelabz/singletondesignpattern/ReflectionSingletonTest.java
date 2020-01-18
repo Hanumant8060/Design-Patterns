@@ -6,7 +6,7 @@ public class ReflectionSingletonTest {
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		EagerInitialistion instanceOne = EagerInitialistion.getInstance();
-		EagerInitialistion instanceTwo = null;
+		EagerInitialistion instanceTwo = EagerInitialistion.getInstance();
 		try {
 		Constructor [] constructor = EagerInitialistion.class.getDeclaredConstructors();
 		for (Constructor constructor2 : constructor) {
